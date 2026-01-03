@@ -57,18 +57,6 @@ export function Hero() {
             <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center">
 
                 {/* Badge */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm text-primary mb-8 backdrop-blur-sm"
-                >
-                    <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                    </span>
-                    Available for Hire
-                </motion.div>
 
                 {/* Headline */}
                 <motion.h1

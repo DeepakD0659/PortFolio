@@ -120,9 +120,9 @@ export const portfolioData = {
         demo: "#",
       },
       apk: {
-        url: "#",
+        url: "/apk/automl-lite-v1.2.0.apk",
         version: "v1.2.0",
-        size: "28 MB"
+        size: "80 MB"
       },
       metrics: [
         { label: "Time Saved", value: "90", suffix: "%" },

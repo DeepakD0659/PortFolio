@@ -93,7 +93,7 @@ export function Contact() {
 
             {/* Footer */}
             <footer className="mt-24 py-8 border-t border-white/5 text-center text-sm text-muted-foreground">
-                <p>© {new Date().getFullYear()} {portfolioData.personal.name}. Built with Next.js & Tailwind.</p>
+                <p>© {new Date().getFullYear()} {portfolioData.personal.name}.</p>
             </footer>
         </section>
     );

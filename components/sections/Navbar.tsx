@@ -39,14 +39,6 @@ export function Navbar() {
                         : "bg-transparent border border-transparent"
                 )}
             >
-                <Link
-                    href="#"
-                    className="px-4 py-2 font-bold text-white hidden md:block"
-                >
-                    DPK.AI
-                </Link>
-
-                <div className="h-4 w-px bg-white/10 hidden md:block" />
 
                 {navItems.map((item) => (
                     <Link

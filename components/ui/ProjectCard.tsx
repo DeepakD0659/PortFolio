@@ -89,10 +89,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             </div>
 
             {project.apk && (
-                <div className="mb-4">
+                <div className="mb-6">
                     <a
                         href={project.apk.url}
-                        className="flex items-center justify-between w-full p-3 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 transition-all group"
+                        download
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-between w-full p-3 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 transition-all group mb-2"
                     >
                         <div className="flex items-center gap-3">
                             <div className="p-2 bg-primary/20 rounded-md text-primary">
@@ -101,12 +104,15 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                             <div>
                                 <div className="text-xs font-bold text-white group-hover:text-primary transition-colors">Download APK</div>
                                 <div className="text-[10px] text-muted-foreground">
-                                    {project.apk.version} • {project.apk.size}
+                                    {project.apk.version} • {project.apk.size} • Android
                                 </div>
                             </div>
                         </div>
                         <Download className="h-4 w-4 text-primary opacity-50 group-hover:opacity-100 transition-opacity" />
                     </a>
+                    <p className="text-[10px] text-muted-foreground/60 text-center px-2">
+                        ⚠️ Demo / Educational use only. Not on Play Store.
+                    </p>
                 </div>
             )}
 
