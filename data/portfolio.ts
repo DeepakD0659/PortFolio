@@ -25,7 +25,7 @@ export const portfolioData = {
       },
       {
         name: "Resume",
-        url: "/resume.pdf",
+        url: "/resume/Deepak_AI_ML_Engineer.pdf",
         icon: FileText,
       },
       {

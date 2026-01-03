@@ -58,6 +58,25 @@ export function Contact() {
                                     )
                                 })}
                             </div>
+
+                            <div className="flex gap-4 pt-2">
+                                <Link
+                                    href={portfolioData.personal.socials.find(s => s.name === "Resume")?.url || "/"}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+                                >
+                                    View Resume
+                                </Link>
+                                <span className="text-white/10">|</span>
+                                <Link
+                                    href={portfolioData.personal.socials.find(s => s.name === "Resume")?.url || "/"}
+                                    download
+                                    className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+                                >
+                                    Download PDF
+                                </Link>
+                            </div>
                         </div>
                     </div>
 

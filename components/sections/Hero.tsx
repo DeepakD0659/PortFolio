@@ -109,21 +109,29 @@ export function Hero() {
                     transition={{ duration: 0.5, delay: 0.4 }}
                     className="flex flex-wrap gap-4 items-center justify-center"
                 >
-                    <Link
-                        href="#projects"
-                        className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-primary px-8 font-medium text-black transition-all duration-300 hover:bg-primary/90 hover:scale-105 hover:shadow-[0_0_20px_rgba(0,240,255,0.5)]"
-                    >
-                        <span className="mr-2">View Work</span>
-                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Link>
+                    <div className="flex flex-col items-center gap-3">
+                        <div className="flex flex-wrap gap-4 justify-center">
+                            <Link
+                                href={personal.socials.find(s => s.name === "Resume")?.url || "/"}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group inline-flex h-12 items-center justify-center rounded-full border border-white/10 bg-white/5 px-8 font-medium text-white transition-all duration-300 hover:bg-white/10 hover:scale-105 backdrop-blur-sm"
+                            >
+                                <ArrowRight className="mr-2 h-4 w-4" />
+                                View Resume
+                            </Link>
 
-                    <Link
-                        href={personal.socials.find(s => s.name === "Resume")?.url || "/"}
-                        className="group inline-flex h-12 items-center justify-center rounded-full border border-white/10 bg-white/5 px-8 font-medium text-white transition-all duration-300 hover:bg-white/10 hover:scale-105 backdrop-blur-sm"
-                    >
-                        <Download className="mr-2 h-4 w-4" />
-                        Download Resume
-                    </Link>
+                            <Link
+                                href={personal.socials.find(s => s.name === "Resume")?.url || "/"}
+                                download
+                                className="group inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 font-medium text-black transition-all duration-300 hover:bg-primary/90 hover:scale-105 hover:shadow-[0_0_20px_rgba(0,240,255,0.5)]"
+                            >
+                                <Download className="mr-2 h-4 w-4" />
+                                Download PDF
+                            </Link>
+                        </div>
+
+                    </div>
 
                     <div className="flex gap-4 ml-4 pl-4 border-l border-white/10">
                         {personal.socials.map((social) => {
